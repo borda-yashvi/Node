@@ -1,20 +1,15 @@
-const express = require("express");
-const app = express();
-const port = 3003;
+const express = require("express")
+const mongoose = require("mongoose")
+const node_1 = require("node_1")
+const app=express()
+const port=3030
 
-app.get("/",(req,res)=>
-{
-    res.json({msg:"Hello"});
-    console.log("Hello")
-});
-
-app.get("/log",(req,res)=>
-{
-    res.json({msg:"login"});
-    console.log("log")
-});
+app.use(express.json())
+app.use(cors())
 
 app.listen(port,()=>
 {
-    console.log(`server listining on port ${port}`);
-});
+    console.log(`server listening port ${port}`)
+})
+
+// npm i express mongoose morgan cors nodemon dotenv
